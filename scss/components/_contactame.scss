@@ -1,0 +1,95 @@
+/*Contactame*/
+.contenido {
+    @extend %contenido;
+    .sliderContacto{
+       @include imgSlider(url(../img/contactame/contacto.jpg), bottom left, 110%);
+     
+   
+       .sliderContactame{
+           @extend %slider;
+           @include colSlider(relative, rgba($bg-terciario, 0.7), 0px, 300px); 
+          
+           @include mobile{
+               @include colSlider(static, rgba($bg-terciario, 1), 250px 0 0 0, auto); 
+      
+              }
+           h1{
+               @extend %h1;
+          
+               .TitInt2{
+                @include TitInterior(2em, $bg-principal, 20%);
+                @include mobile{
+                    @include TitInterior(1.7em, $bg-principal, 20%);
+                   }  
+             }
+           }
+           .infoContactame{
+            @include info(30px, 60%);
+            @include mobile{
+                @include info(20px, 80%); 
+               }  
+            }
+           p.capitalLetter:first-letter{
+              @extend %capital-letter;
+             }
+
+        }
+        
+    }
+    form{
+        ::placeholder{
+            text-align: center;
+        }
+        input{
+            text-align: center;
+        }
+     
+          .botonContacto{
+            width: map-get($botones, btn-width-sm);
+            @extend %btnsCon;
+            border-left: 0px;
+            border-right: 0px;
+            a{
+             @extend %btna;
+             
+            }
+            &:hover{
+                width: map-get($botones, btn-width-sm2);
+                text-shadow: map-get($botones, btn-text-shadow);
+              }
+            
+        }  
+     }
+     .conContacto{
+        @include contFlex(flex, row, space-around, top, 10px, 70px 0px);
+        flex-wrap: wrap;
+        @include mobile{
+            @include contFlex(flex, row, center, top, 10px, 70px 0px);
+         
+            width: 100%;
+        }
+       
+        .iconoDatos{
+            width: 70px;
+            margin: auto;
+            img{
+                width: 100%;
+            }
+        }
+        .card{
+            color: $bg-terciario;
+            a{
+             color: map-get($botones, btn-color2);
+             text-decoration: map-get($botones, btn-txt-deco);
+             &:hover{
+                color: $bg-principal;
+                font-weight: bold;
+            }
+            }
+
+            
+        }
+       
+     }
+
+}

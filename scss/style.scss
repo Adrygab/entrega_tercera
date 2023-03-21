@@ -1,0 +1,19 @@
+//Base
+@import './base/mediaQuery';
+@import './base/variables';
+@import './base/flex';
+@import './base/animacion';
+@import './base/botones';
+@import './base/titles-Tipografia';
+@import './base/slider';
+@import './base/contDegradado';
+
+//Components
+@import './components/header';
+@import './components/body';
+@import './components/inicio';
+@import './components/conoceme';
+@import './components/portafolio';
+@import './components/clientes';
+@import './components/contactame';
+@import './components/footer';

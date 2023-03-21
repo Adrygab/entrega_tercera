@@ -1,0 +1,30 @@
+%contenido{
+    margin: 0px;
+    padding: 0px;
+}
+
+%slider{
+    width: 100%;
+    padding: 0;
+    background-repeat: no-repeat;
+}
+
+@mixin imgSlider($back-imgSlider, $bgpos-imgSlider, $bgSize-imgSlider )
+{
+    background-image: $back-imgSlider;
+    background-position: $bgpos-imgSlider;
+    background-size: $bgSize-imgSlider;
+ 
+    
+}
+
+@mixin colSlider($posticion-colSlider, $bg-colSlider, $margin-colSlider, $hei-colSlider){
+    position: $posticion-colSlider;
+    background-color:  $bg-colSlider;
+    margin:  $margin-colSlider;
+    height: $hei-colSlider;
+    
+}
+
+
+

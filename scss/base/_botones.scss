@@ -1,0 +1,35 @@
+%btns{
+    padding: 10px;
+    margin: auto;
+    text-align: center;
+    transition: $transition;
+    background-color: $transparent;
+    border-top: 1px solid $bg-principal;
+    border-bottom: 1px solid $bg-principal;
+}
+
+%btnsCon{
+    padding: 10px;
+    margin: auto;
+    text-align: center;
+    transition: $transition;
+    background-color: $transparent;
+    border-top: 1px solid $bg-fondo;
+    border-bottom: 1px solid $bg-fondo;
+}
+
+%btna{
+    text-decoration: none;
+    color: $bg-fondo;
+}
+
+$botones:(
+    btn-width-sm: 150px,
+    btn-width-sm2: 200px,
+    btn-width-sh: 250px,
+    btn-width-lg: 300px,
+    btn-text-shadow: 2px 0px 5px $bg-fondo,
+    btn-color2:$bg-terciario,
+    btn-txt-deco:none,
+
+);

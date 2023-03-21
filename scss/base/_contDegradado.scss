@@ -1,0 +1,11 @@
+%contenedorDeg{
+    width: 100%;
+    height: auto;
+    display: flex;
+    font-family: 'Barlow', sans-serif;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background: linear-gradient(to bottom, $bg-terciario, $bg-principal);
+
+}

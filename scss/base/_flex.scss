@@ -1,0 +1,10 @@
+@mixin contFlex($df-contFlex,$fd-contFlex,$jc-contFlex, $ai-contFlex,$g-contFlex, $margin-contFlex)
+{
+    display: $df-contFlex;
+    flex-direction: $fd-contFlex;
+    justify-content: $jc-contFlex;
+    align-items: $ai-contFlex;
+    gap: $g-contFlex;
+    margin:$margin-contFlex ;
+}
+

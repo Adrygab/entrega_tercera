@@ -1,0 +1,98 @@
+header{
+    position:fixed;
+    left:0px;
+    top:0px;
+    @include contFlex(flex, column, center, center, 0px, 0px);
+    background-color: $bg-terciario;
+    z-index: 20;
+    box-shadow: 5px 5px 15px $bg-terciario;
+    height: 100%;
+    @include tablet{
+        position:static;
+        height: auto;
+        @include contFlex(inline-block, row, center, center, 0px, 0px);
+    }
+    @include mobile{
+        position:static;
+        height: auto;
+        @include contFlex(inline-block, row, center, center, 0px, 0px);
+    }
+
+   nav{
+    .navbar-toggler-icon{
+        background-image:url(../img/menu.png);
+    }
+    .menuVer{
+      @include contFlex(flex, column, center, center, 0px, 0px);
+      @include tablet{
+        @include contFlex(flex, row, center, center, 0px, 0px);
+    }
+    @include mobile{
+        @include contFlex(flex, row, center, center, 0px, 0px);
+    }
+    }
+    img{
+        max-width: 90%;
+        @include mobile{
+            max-width: 70%;
+        }
+    }
+    .nav-link{
+        color: #ffffff;
+        @extend %hoverAnimado;
+    }
+    .active{
+        color:$bg-principal;
+        font-weight: bold;
+            }
+    .nav-link{
+    &:hover{
+       color:$bg-principal;
+       font-size: 18px;
+       font-weight: bold; 
+    }
+    }
+    .telefono{
+        width: map-get($botones, btn-width-sm);
+        @extend %btns;
+        @include tablet {
+            margin: 0;
+        }
+        @include mobile {
+            margin: 0;
+        }
+       
+        a{
+            @extend %btna;
+        &:hover{
+          width: map-get($botones, btn-width-sm2);
+          text-shadow: map-get($botones, btn-text-shadow);
+          color: $bg-fondo;
+        }
+       } 
+        
+    }
+
+    .WhatsAppBtn{
+        width: 50px;
+        height: 50px;
+        margin: 10px auto;
+        transform: scale(100%);
+        @extend %hoverAnimado;
+        &:hover{
+            transform: scale(130%);
+           }
+        @include tablet{
+            margin: 10px 0;
+        }
+        @include mobile{
+            margin: 10px 0;
+        }
+     }
+
+   }
+    
+   }
+
+
+

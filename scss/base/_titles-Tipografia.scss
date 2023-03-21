@@ -1,0 +1,58 @@
+/*Titulos generales*/
+%sombra {
+    text-shadow: 10px 5px 10px rgba($bg-terciario,0.9);
+    text-align: center;
+}
+
+%h1{
+    font-family: 'Nunito', sans-serif;
+}
+
+%h2{
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+%h3{
+    font-size: 3em;
+    font-family: 'Barlow', sans-serif;
+    color: $bg-principal;
+    
+}
+
+%h4{
+    font-size: 1.2em;
+    font-family: 'Barlow', sans-serif;
+    color: $bg-fondo;
+}
+%h5{
+    font-size: 1.2em;
+    font-family: 'Barlow', sans-serif;
+    font-weight: bold;
+}
+
+
+
+@mixin TitInterior($fs-TitInt, $color-TitInt, $lihe-TitInt){
+    font-size: $fs-TitInt;
+    color: $color-TitInt;
+    line-height: $lihe-TitInt;
+}
+
+%capital-letter{
+    font-size:40px;
+    font-weight: bold;
+    line-height:20px;
+    padding:1px;
+    margin-right: 1px;  
+    font-family: 'Barlow', sans-serif; 
+}
+
+@mixin info($font--info, $width--info){
+    font-size: $font--info;
+    width: $width--info;
+}
+
+

@@ -1,0 +1,151 @@
+/*Portafolio*/
+.contenido{
+    @extend %contenido;
+    .sliderPortafolio {
+        @include imgSlider(url(../img/portafolio/slide_portafolio.jpg), center left, 110%);
+        @include mobile{
+          @include imgSlider(url(../img/portafolio/slide_portafolio.jpg), top center, 150%);
+          
+        }
+        .sliderPorta{
+            @include contFlex (flex, row, center, center, 10px,0px);
+            @include colSlider(relative, rgba($bg-terciario, 0.9), 0px, 300px); 
+            padding-top: 100px;
+            left:0px;
+            @include tablet{
+              padding-top: 200px;
+            }
+
+            @include mobile{
+              @include contFlex (flex, column, center, center, 10px, 0px);
+                @include colSlider(static, rgba($bg-terciario, 1), 250px 0 0 0, auto);
+                padding-top: 50px;
+                width: 103%; 
+                 }
+               h1{
+                @extend %h1;
+               .TitInt{
+                  @include TitInterior(1.5em, $bg-fondo, 90%);
+                  } 
+                .TitInt2{
+                 @include TitInterior(2.5em, $bg-principal, 100%);
+                 @include tablet{
+                  @include TitInterior(2em, $bg-principal, 100%);
+                 }
+               
+              }
+            }
+            .img_portafolio
+            {
+              margin-top: 0px;
+              img{
+                max-width: 450px;
+                @include tablet{
+                  max-width: 300px;
+                }
+                @include mobile{
+                  max-width: 300px;
+                }
+              }
+           
+            }
+          } 
+        }
+        .galeria{
+          max-width: 1024px;
+            display: grid;
+            margin:50px auto;
+           grid-template-columns: repeat(3, 1fr );
+            grid-template-rows: repeat (4, 1fr );
+            justify-content: center;
+            gap: 1rem;
+            @include tablet{
+              max-width: 100%;
+              justify-content: center;
+              grid-template-columns: repeat(2, 1fr );
+                grid-template-rows: repeat(1, 1fr );
+                gap:1rem;
+                margin:50px 20px;
+            }
+            @include mobile{
+              grid-template-columns: repeat(1, 1fr );
+            grid-template-rows: repeat (1, 1fr );
+            }
+            .galleryItem{
+              width: 250px;
+              height:auto;
+              @include tablet{
+                width: 300px;
+                }
+                @include mobile{
+                  width: 100%;
+                }
+              
+              img{
+                width:100%;
+              }
+            }
+          
+          
+          }
+
+          .flip-card {
+            background-color: $transparent;
+            width: 300px;
+            height:187px;
+            perspective: 1000px;
+            @include mobile{
+              width: 90%;
+              height: 300px;
+            }
+          }
+          .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+           transition: transform 0.8s;
+            transform-style: preserve-3d;
+            box-shadow: $sombraCont;
+          }
+          .flip-card:hover .flip-card-inner {
+            @extend %rotate;          
+          }
+          .flip-card-front, .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden; /* Safari */
+            backface-visibility: hidden;
+          }
+          .flip-card-back {
+            background: linear-gradient(to bottom, $bg-relleno, $bg-terciario);
+            color:$bg-fondo;
+            @extend %rotate; 
+            padding: 10px;
+            h5{
+              @extend %h5;
+              color: $bg-principal;
+            } 
+            @include mobile{
+              padding: 50px 10px; 
+              
+            } 
+          }
+          
+
+          .btnPortafolio{
+            width: map-get($botones, btn-width-sm);
+            color:map-get($botones, btn-color2);
+            @extend %btns;
+            a{
+              @extend %btna;
+            } 
+            &:hover{
+              width: map-get($botones, btn-width-sm2);
+             
+            }
+          }
+          
+   
+}

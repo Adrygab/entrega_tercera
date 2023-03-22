@@ -20,12 +20,15 @@
       
         .sliderConocemeTit{
             @extend %slider;
-            @include colSlider(absolute, rgba($bg-fondo, 0), 0px, 300px); 
+            @include colSlider(relative, rgba($bg-fondo, 0), 0px, 300px); 
+      
            
             @include mobile{
-                @include colSlider(static, rgba($bg-fondo, 1), 250px 0 0 0, auto); 
+                @include colSlider(static, rgba($bg-fondo, 1), 250px 0 0 0, 200px); 
        
                }
+            
+
             h1{
                 @extend %h1;
                .TitInt{

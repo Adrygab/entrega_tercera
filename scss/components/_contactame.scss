@@ -2,7 +2,7 @@
 .contenido {
     @extend %contenido;
     .sliderContacto{
-       @include imgSlider(url(../img/contactame/contacto.jpg), bottom left, 110%);
+       @include imgSlider(url(../img/contactame/contacto.jpg), top left, 120%);
      
    
        .sliderContactame{

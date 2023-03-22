@@ -405,7 +405,7 @@ body .ContGral {
   }
 }
 .contenido .sliderConoceme .sliderConocemeTit {
-  position: absolute;
+  position: relative;
   background-color: rgba(255, 255, 255, 0);
   margin: 0px;
   height: 300px;
@@ -415,7 +415,7 @@ body .ContGral {
     position: static;
     background-color: white;
     margin: 250px 0 0 0;
-    height: auto;
+    height: 200px;
   }
 }
 .contenido .sliderConoceme .sliderConocemeTit h1 .TitInt {
@@ -702,6 +702,13 @@ body .ContGral {
   background-position: center left;
   background-size: 110%;
 }
+@media screen and (max-width: 570px) {
+  .contenido .sliderClientes {
+    background-image: url(../img/clientes/slide_clientes.jpg);
+    background-position: top left;
+    background-size: 115%;
+  }
+}
 .contenido .sliderClientes .sliderCliente {
   position: relative;
   background-color: rgba(0, 0, 0, 0.7);
@@ -739,6 +746,8 @@ body .ContGral {
 }
 .contenido .slider {
   margin: 100px 0px;
+  width: 80%;
+  margin: 50px auto;
 }
 .contenido .slider .flex-container a:hover,
 .contenido .slider .flex-slider a:hover {
@@ -932,8 +941,8 @@ body .ContGral {
 /*Contactame*/
 .contenido .sliderContacto {
   background-image: url(../img/contactame/contacto.jpg);
-  background-position: bottom left;
-  background-size: 110%;
+  background-position: top left;
+  background-size: 120%;
 }
 .contenido .sliderContacto .sliderContactame {
   position: relative;

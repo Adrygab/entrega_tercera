@@ -5,6 +5,10 @@
 
     .sliderClientes {
         @include imgSlider(url(../img/clientes/slide_clientes.jpg), center left, 110%);
+        @include mobile{
+          @include imgSlider(url(../img/clientes/slide_clientes.jpg), bottom left, 125%);  
+        }
+        
         .sliderCliente{
             @extend %slider;
             @include colSlider(relative, rgba($bg-terciario, 0.7), 0px, 300px); 
@@ -41,6 +45,8 @@
 
     .slider{
         margin: 100px 0px;
+        width: 80%;
+        margin: 50px auto;
         .flex-container a:hover,
   .flex-slider a:hover {
     outline: none;
@@ -57,6 +63,7 @@
   .flexslider {
     margin: 50px;
     padding: 0;
+    
   }
   .flexslider .slides > li {
     display: none;

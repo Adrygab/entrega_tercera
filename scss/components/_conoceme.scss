@@ -1,7 +1,6 @@
 /*Conóceme*/
 .contenido {
-
-    @extend %contenido;
+@extend %contenido;
      .sliderConoceme{
         @extend %slider;
         @include imgSlider(url(../img/conoceme/conoceme.jpg), top left, 100%);

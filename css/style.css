@@ -616,7 +616,6 @@ body .ContGral {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(1, 1fr);
     gap: 1rem;
-    margin: 50px 20px;
   }
 }
 @media screen and (max-width: 570px) {
@@ -628,6 +627,12 @@ body .ContGral {
 .contenido .galeria .galleryItem {
   width: 250px;
   height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  margin: auto;
 }
 @media screen and (max-width: 768px) {
   .contenido .galeria .galleryItem {

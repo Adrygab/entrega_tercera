@@ -19,6 +19,13 @@ header{
     }
 
    nav{
+    .animaLogo{
+      @extend %hoverAnimado;
+      &:hover{
+        @extend %rotateLogo;
+       
+      }  
+    }
     .navbar-toggler-icon{
         background-image:url(../img/menu.png);
     }

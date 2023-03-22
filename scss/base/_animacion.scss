@@ -1,3 +1,4 @@
+/*Animación para el hover*/
 %hoverAnimado{
     transition: all ease 0.5s; 
 }
@@ -5,4 +6,37 @@
 /*Flip and flop*/
 %rotate{
 transform: rotateY(180deg); 
+}
+/*Animación para el logotipo*/
+%rotateLogo{
+
+    animation: rotar 0.5s;
+}
+
+@keyframes rotar{
+    2%{
+
+        transform: rotateZ(-5deg);  
+    }
+  
+    10%{
+
+        transform: rotateZ(10deg);  
+    }
+    30%{
+
+        transform: rotateZ(-15deg);  
+    }
+   50%{
+
+        transform: rotateZ(-5deg);  
+    }
+    70%{
+
+        transform: rotateZ(10deg);  
+    }
+    100%{
+
+        transform: rotateZ(-15deg);  
+    }
 }

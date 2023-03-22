@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /*Sombra*/
-header nav .WhatsAppBtn, header nav .nav-link {
+/*Animación para el hover*/
+header nav .WhatsAppBtn, header nav .nav-link, header nav .animaLogo {
   transition: all ease 0.5s;
 }
 
@@ -9,6 +10,31 @@ header nav .WhatsAppBtn, header nav .nav-link {
   transform: rotateY(180deg);
 }
 
+/*Animación para el logotipo*/
+header nav .animaLogo:hover {
+  animation: rotar 0.5s;
+}
+
+@keyframes rotar {
+  2% {
+    transform: rotateZ(-5deg);
+  }
+  10% {
+    transform: rotateZ(10deg);
+  }
+  30% {
+    transform: rotateZ(-15deg);
+  }
+  50% {
+    transform: rotateZ(-5deg);
+  }
+  70% {
+    transform: rotateZ(10deg);
+  }
+  100% {
+    transform: rotateZ(-15deg);
+  }
+}
 .contenido .btnPortafolio, .contenido .habilidades .botonConoceme, .contenido .oscuro .InfoInicio .botonIndex, header nav .telefono {
   padding: 10px;
   margin: auto;
@@ -734,7 +760,6 @@ body .ContGral {
   display: block;
 }
 .contenido .slider .flexslider .slides:after {
-  /* content: "\0020";*/
   display: block;
   clear: both;
   visibility: hidden;
@@ -750,10 +775,6 @@ body .ContGral {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
-  /*-webkit-box-shadow: '' 0 1px 4px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: '' 0 1px 4px rgba(0, 0, 0, 0.2);
-  -o-box-shadow: '' 0 1px 4px rgba(0, 0, 0, 0.2);
-  box-shadow: '' 0 1px 4px rgba(0, 0, 0, 0.2);*/
 }
 .contenido .slider .flexslider .slides {
   zoom: 1;
@@ -789,7 +810,6 @@ body .ContGral {
   opacity: 0;
   cursor: pointer;
   color: rgba(0, 0, 0, 0.8);
-  /*text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3);*/
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
@@ -800,13 +820,10 @@ body .ContGral {
   font-family: "flexslider-icon";
   font-size: 40px;
   display: inline-block;
-  /*content: '\f001';*/
   color: rgba(0, 0, 0, 0.8);
   color: transparent;
-  /* text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3);*/
 }
 .contenido .slider .flex-direction-nav a.flex-next:before {
-  /* content: '\f002';*/
   color: transparent;
 }
 .contenido .slider .flex-direction-nav .flex-prev {

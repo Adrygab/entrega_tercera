@@ -67,7 +67,6 @@
     display: block;
   }
   .flexslider .slides:after {
-   /* content: "\0020";*/
     display: block;
     clear: both;
     visibility: hidden;
@@ -83,10 +82,6 @@
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;
-    /*-webkit-box-shadow: '' 0 1px 4px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: '' 0 1px 4px rgba(0, 0, 0, 0.2);
-    -o-box-shadow: '' 0 1px 4px rgba(0, 0, 0, 0.2);
-    box-shadow: '' 0 1px 4px rgba(0, 0, 0, 0.2);*/
   }
   .flexslider .slides {
     zoom: 1;
@@ -123,7 +118,6 @@
     opacity: 0;
     cursor: pointer;
     color: rgba(0, 0, 0, 0.8);
-    /*text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3);*/
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     -ms-transition: all 0.3s ease-in-out;
@@ -134,13 +128,10 @@
     font-family: "flexslider-icon";
     font-size: 40px;
     display: inline-block;
-    /*content: '\f001';*/
     color: rgba(0, 0, 0, 0.8);
     color: transparent;
-   /* text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3);*/
   }
   .flex-direction-nav a.flex-next:before {
-   /* content: '\f002';*/
    color: transparent;
   }
   .flex-direction-nav .flex-prev {

@@ -25,27 +25,17 @@
                  }
                h1{
                 @extend %h1;
-                max-width: 1024px;
-                margin: auto;
                 
                .TitInt{
-                font-size: 1.5em;
-                color: aliceblue;
-                 /* @include TitInterior(1.5em, $bg-fondo, 90%);*/
+                 @include TitInterior(1.5em, $bg-fondo, 90%);
                   } 
                 .TitInt2{
-                  font-size: 1.5em;
-                color:red;
-                /* @include TitInterior(2.5em, $bg-principal, 100%);*/
+                @include TitInterior(2em, $bg-principal, 100%);
                 
                
               }
             }
-
-           
-
-
-            .img_portafolio
+           .img_portafolio
             {
               margin-top: 0px;
               img{

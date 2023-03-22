@@ -4,13 +4,14 @@
     @extend %contenido;
 
     .sliderClientes {
+      @extend %slider;
         @include imgSlider(url(../img/clientes/slide_clientes.jpg), center left, 110%);
         @include mobile{
           @include imgSlider(url(../img/clientes/slide_clientes.jpg), bottom left, 125%);  
         }
         
         .sliderCliente{
-            @extend %slider;
+           
             @include colSlider(relative, rgba($bg-terciario, 0.7), 0px, 300px); 
             left:0px;
            

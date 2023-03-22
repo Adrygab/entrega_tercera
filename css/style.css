@@ -105,7 +105,7 @@ header nav .animaLogo:hover {
   padding: 0px;
 }
 
-.contenido .sliderContacto .sliderContactame, .contenido .sliderClientes .sliderCliente, .contenido .sliderPortafolio, .contenido .sliderConoceme {
+.contenido .sliderContacto .sliderContactame, .contenido .sliderClientes, .contenido .sliderPortafolio, .contenido .sliderConoceme {
   background-repeat: no-repeat;
 }
 
@@ -258,7 +258,7 @@ header nav .WhatsAppBtn:hover {
 /*font-family: 'Barlow', sans-serif;*/
 body {
   font-family: "Barlow", sans-serif;
-  /*overflow-x: hidden;*/
+  overflow-x: hidden !important;
 }
 body .ContGral {
   width: 100%;
@@ -565,19 +565,15 @@ body .ContGral {
     width: 103%;
   }
 }
-.contenido .sliderPortafolio .sliderPorta h1 {
-  max-width: 1024px;
-  margin: auto;
-}
 .contenido .sliderPortafolio .sliderPorta h1 .TitInt {
   font-size: 1.5em;
-  color: aliceblue;
-  /* @include TitInterior(1.5em, $bg-fondo, 90%);*/
+  color: #ffffff;
+  line-height: 90%;
 }
 .contenido .sliderPortafolio .sliderPorta h1 .TitInt2 {
-  font-size: 1.5em;
-  color: red;
-  /* @include TitInterior(2.5em, $bg-principal, 100%);*/
+  font-size: 2em;
+  color: #f90300;
+  line-height: 100%;
 }
 .contenido .sliderPortafolio .sliderPorta .img_portafolio {
   margin-top: 0px;

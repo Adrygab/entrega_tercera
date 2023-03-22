@@ -52,9 +52,7 @@
             text-align: center;
             h1{
                 @extend %h1;
-               .sombra{
-                @extend %sombra;
-               }
+              
                 .bienvenido{
                     font-size: 2em;
                     color:$bg-fondo;

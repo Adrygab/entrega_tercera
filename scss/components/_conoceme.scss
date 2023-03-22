@@ -9,34 +9,41 @@
         margin: 0px;
         @include tablet{
          margin: 110px 0 0 0;
-
         }
         @include mobile{
-            @include imgSlider(url(../img/conoceme/conoceme.jpg), top left, 160%);
-            margin: 90px 0 0 0;
+           @include imgSlider(url(../img/conoceme/conoceme.jpg), top left, 140%);
+            margin: 90px auto;
             height: auto;
-   
+         
            }
       
         .sliderConocemeTit{
-            @extend %slider;
+           
             @include colSlider(relative, rgba($bg-fondo, 0), 0px, 300px); 
-      
+            
            
             @include mobile{
-                @include colSlider(static, rgba($bg-fondo, 1), 250px 0 0 0, 200px); 
+             @include colSlider(static, rgba($bg-fondo, 1), 300px 0 0 0, 50px); 
        
                }
             
 
             h1{
                 @extend %h1;
+                @include mobile{
+                    text-align: center;
+                    
+                 }
                .TitInt{
-                  @include TitInterior(1.5em, $bg-fondo, 1em);
+                  @include TitInterior(1.5em, $bg-fondo, 60%);
+             
                   } 
                 .TitInt2{
-                 @include TitInterior(3em, $bg-principal, 1em);
+                 @include TitInterior(3em, $bg-principal, 100%);
+                
               }
+              
+
             }
          }
       

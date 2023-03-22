@@ -2,6 +2,7 @@
 .contenido{
     @extend %contenido;
     .sliderPortafolio {
+      @extend %slider;
         @include imgSlider(url(../img/portafolio/slide_portafolio.jpg), center left, 110%);
         @include mobile{
           @include imgSlider(url(../img/portafolio/slide_portafolio.jpg), top center, 150%);
@@ -24,17 +25,26 @@
                  }
                h1{
                 @extend %h1;
+                max-width: 1024px;
+                margin: auto;
+                
                .TitInt{
-                  @include TitInterior(1.5em, $bg-fondo, 90%);
+                font-size: 1.5em;
+                color: aliceblue;
+                 /* @include TitInterior(1.5em, $bg-fondo, 90%);*/
                   } 
                 .TitInt2{
-                 @include TitInterior(2.5em, $bg-principal, 100%);
-                 @include tablet{
-                  @include TitInterior(2em, $bg-principal, 100%);
-                 }
+                  font-size: 1.5em;
+                color:red;
+                /* @include TitInterior(2.5em, $bg-principal, 100%);*/
+                
                
               }
             }
+
+           
+
+
             .img_portafolio
             {
               margin-top: 0px;

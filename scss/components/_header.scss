@@ -5,7 +5,6 @@ header{
     @include contFlex(flex, column, center, center, 0px, 0px);
     background-color: $bg-terciario;
     z-index: 20;
-    box-shadow: 5px 5px 15px $bg-terciario;
     height: 100%;
     @include tablet{
         position:static;

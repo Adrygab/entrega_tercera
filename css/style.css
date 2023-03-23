@@ -696,8 +696,8 @@ body .ContGral {
 @media screen and (max-width: 570px) {
   .contenido .sliderClientes {
     background-image: url(../img/clientes/slide_clientes.jpg);
-    background-position: bottom left;
-    background-size: 125%;
+    background-position: top center;
+    background-size: 150%;
   }
 }
 .contenido .sliderClientes .sliderCliente {

@@ -120,6 +120,14 @@ header nav .animaLogo:hover {
   background: linear-gradient(to bottom, #000000, #f90300);
 }
 
+.contenido .clienteGallery, .contenido .galeria {
+  max-width: 1024px;
+  display: grid;
+  margin: 50px auto;
+  justify-content: center;
+  gap: 1rem;
+}
+
 header {
   position: fixed;
   left: 0px;
@@ -592,21 +600,13 @@ body .ContGral {
   }
 }
 .contenido .galeria {
-  max-width: 1024px;
-  display: grid;
-  margin: 50px auto;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat 4, 1fr;
-  justify-content: center;
-  gap: 1rem;
 }
 @media screen and (max-width: 768px) {
   .contenido .galeria {
-    max-width: 100%;
-    justify-content: center;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(1, 1fr);
-    gap: 1rem;
+    grid-template-rows: repeat 1, 1fr;
   }
 }
 @media screen and (max-width: 570px) {
@@ -735,198 +735,28 @@ body .ContGral {
     width: 80%;
   }
 }
-.contenido .slider {
-  margin: 100px 0px;
-  width: 80%;
-  margin: 50px auto;
+.contenido .clienteGallery {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat 4, 1fr;
 }
-.contenido .slider .flex-container a:hover,
-.contenido .slider .flex-slider a:hover {
-  outline: none;
+.contenido .clienteGallery img {
+  margin: auto;
 }
-.contenido .slider .slides,
-.contenido .slider .slides > li,
-.contenido .slider .flex-control-nav,
-.contenido .slider .flex-direction-nav {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+.contenido .clienteGallery img:hover {
+  transform: scale(1.1);
+  transition: all ease 0.5s;
 }
-.contenido .slider .flexslider {
-  margin: 50px;
-  padding: 0;
+@media screen and (max-width: 768px) {
+  .contenido .clienteGallery {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat 1, 1fr;
+  }
 }
-.contenido .slider .flexslider .slides > li {
-  display: none;
-  -webkit-backface-visibility: hidden;
-}
-.contenido .slider .flexslider .slides img {
-  width: 70%;
-  display: block;
-}
-.contenido .slider .flexslider .slides:after {
-  display: block;
-  clear: both;
-  visibility: hidden;
-  line-height: 0;
-  height: 0;
-}
-.contenido .slider .flexslider {
-  margin: 0 0 60px;
-  background: #fff;
-  border: 4px solid #fff;
-  position: relative;
-  zoom: 1;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-}
-.contenido .slider .flexslider .slides {
-  zoom: 1;
-}
-.contenido .slider .flexslider .slides img {
-  height: auto;
-  -moz-user-select: none;
-}
-.contenido .slider .flex-viewport {
-  max-height: 2000px;
-  -webkit-transition: all 1s ease;
-  -moz-transition: all 1s ease;
-  -ms-transition: all 1s ease;
-  -o-transition: all 1s ease;
-  transition: all 1s ease;
-}
-.contenido .slider .carousel li {
-  margin-right: 5px;
-}
-.contenido .slider .flex-direction-nav {
-  *height: 0;
-}
-.contenido .slider .flex-direction-nav a {
-  text-decoration: none;
-  display: block;
-  width: 40px;
-  height: 50px;
-  margin: -20px 0 0;
-  position: absolute;
-  top: 50%;
-  z-index: 10;
-  overflow: hidden;
-  opacity: 0;
-  cursor: pointer;
-  color: rgba(0, 0, 0, 0.8);
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-.contenido .slider .flex-direction-nav a:before {
-  font-family: "flexslider-icon";
-  font-size: 40px;
-  display: inline-block;
-  color: rgba(0, 0, 0, 0.8);
-  color: transparent;
-}
-.contenido .slider .flex-direction-nav a.flex-next:before {
-  color: transparent;
-}
-.contenido .slider .flex-direction-nav .flex-prev {
-  left: -50px;
-  background-image: url(../img/clientes/flecha-izq.png);
-  color: transparent;
-  background-size: 100%;
-  background-repeat: no-repeat;
-}
-.contenido .slider .flex-direction-nav .flex-next {
-  right: -50px;
-  text-align: right;
-  color: transparent;
-  background-image: url(../img/clientes/flecha-der.png);
-  background-size: 100%;
-  background-repeat: no-repeat;
-}
-.contenido .slider .flexslider:hover .flex-direction-nav .flex-prev {
-  opacity: 0.7;
-  left: 10px;
-}
-.contenido .slider .flexslider:hover .flex-direction-nav .flex-prev:hover {
-  opacity: 1;
-}
-.contenido .slider .flexslider:hover .flex-direction-nav .flex-next {
-  opacity: 0.7;
-  right: 10px;
-}
-.contenido .slider .flexslider:hover .flex-direction-nav .flex-next:hover {
-  opacity: 1;
-}
-.contenido .slider .flex-direction-nav .flex-disabled {
-  opacity: 0 !important;
-  filter: alpha(opacity=0);
-  cursor: default;
-  z-index: -1;
-}
-.contenido .slider .flex-pauseplay a {
-  display: none;
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  bottom: 5px;
-  left: 10px;
-  opacity: 0.8;
-  z-index: 10;
-  overflow: hidden;
-  cursor: pointer;
-  color: #000;
-}
-.contenido .slider .flex-pauseplay a:before {
-  font-family: "flexslider-icon";
-  font-size: 20px;
-  display: inline-block;
-  content: "\f004";
-}
-.contenido .slider .flex-pauseplay a:hover {
-  opacity: 1;
-}
-.contenido .slider .flex-pauseplay a.flex-play:before {
-  content: "\f003";
-}
-.contenido .slider .flex-control-nav {
-  width: 100%;
-  position: absolute;
-  bottom: -40px;
-  text-align: center;
-}
-.contenido .slider .flex-control-nav li {
-  margin: 0 6px;
-  display: inline-block;
-  zoom: 1;
-  *display: inline;
-}
-.contenido .slider .flex-control-paging li a {
-  width: 11px;
-  height: 11px;
-  display: block;
-  background: #666;
-  background: rgba(0, 0, 0, 0.5);
-  cursor: pointer;
-  text-indent: -9999px;
-  -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
-  -o-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
-  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  border-radius: 20px;
-}
-.contenido .slider .flex-control-paging li a:hover {
-  background: #333;
-  background: rgba(0, 0, 0, 0.7);
-}
-.contenido .slider .flex-control-paging li a.flex-active {
-  background: #000;
-  background: rgba(0, 0, 0, 0.9);
-  cursor: default;
+@media screen and (max-width: 570px) {
+  .contenido .clienteGallery {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat 1, 1fr;
+  }
 }
 
 /*Contactame*/

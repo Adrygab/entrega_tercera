@@ -1,0 +1,12 @@
+%grid{
+    max-width: 1024px;
+    display: grid;
+    margin:50px auto;
+    justify-content: center;
+    gap: 1rem;
+}
+@mixin galeriaGrid($Gc-galeriaGrid, $Gr-galeriaGrid ){
+   grid-template-columns: $Gc-galeriaGrid;
+   grid-template-rows: $Gr-galeriaGrid; 
+
+}

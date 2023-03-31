@@ -1,10 +1,11 @@
 header{
     position:fixed;
+    width: 100%;
     left:0px;
     top:0px;
     @include contFlex(flex, column, center, center, 0px, 0px);
     background-color: $bg-terciario;
-    z-index: 20;
+    z-index: 30;
     height: 100%;
     @include tablet{
         position:static;
@@ -45,7 +46,13 @@ header{
     }
     .nav-link{
         color: #ffffff;
+        @include mobile{
+            font-size: 20px;
+          }
         @extend %hoverAnimado;
+        @include mobile{
+          font-size: 20px;
+        }
     }
     .active{
         color:$bg-principal;
@@ -66,6 +73,7 @@ header{
         }
         @include mobile {
             margin: 0;
+            width: map-get($botones, btn-width-lg);
         }
        
         a{

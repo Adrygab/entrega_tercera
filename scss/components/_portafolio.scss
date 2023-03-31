@@ -45,6 +45,7 @@
                 }
                 @include mobile{
                   max-width: 300px;
+                  margin-top: -100px;
                 }
               }
            
@@ -63,7 +64,6 @@
             }
             
             .galleryItem{
-              width: 250px;
               height:auto;
               @include contFlex(flex, row, center, center, 0, auto);
               @include tablet{
@@ -81,16 +81,27 @@
           
           }
 
-          .flip-card {
+          .flip-card{
             background-color: $transparent;
             width: 300px;
-            height:187px;
             perspective: 1000px;
             @include mobile{
               width: 90%;
-              height: 300px;
             }
           }
+          .medida{
+            height: map-get($medida, height1);
+            @include mobile{
+              height: map-get($medida, height1);
+            }
+          }
+          .medidaBan{
+            height: map-get($medida, height2);
+            @include mobile{
+              height: map-get($medida, height3);
+            }
+          }
+     
           .flip-card-inner {
             position: relative;
             width: 100%;
@@ -137,6 +148,165 @@
              
             }
           }
-          
-   
-}
+         /*Tab para portafolio*/
+        .warpper{
+          @include contFlex(flex, column, center, center, 0, 50px);
+          @include mobile{
+            @include contFlex(flex, column, center, center, 0, 10px); 
+          }
+         .tab{
+           cursor: pointer;
+           padding:10px 20px;
+           margin:0px 2px;
+            background:$bg-terciario;
+            display:inline-block;
+            color:#fff;
+             border-radius:3px 3px 0px 0px;
+             box-shadow: 0 0.5rem 0.8rem #00000080; 
+             }
+
+          .posicion{
+            position: sticky; top: 10px;
+             background-color: $bg-fondo;
+             z-index: 20;
+             @include tablet{
+              top: 130px;
+             }
+             @include mobile{
+              top: 100px;
+             }
+              }
+          .panels{
+            background:#fffffff6;
+             min-height:200px;
+             width:100%;
+             border-radius:3px;
+             overflow:hidden;
+             padding:20px;  
+              }
+            .panel {
+             display:none;
+             animation: fadein .8s;
+             }
+             @keyframes fadein {
+             from {
+              opacity:0;
+               transform: scale(0);
+                 }
+            to {
+              opacity:1;
+              transform: scale(1);
+               }
+             }
+            .panel-title{
+               font-size:1.5em;
+                font-weight:bold
+               }
+            .radio{
+             display:none;
+              }
+              #one:checked ~ .panels #one-panel,
+              #two:checked ~ .panels #two-panel,
+              #three:checked ~ .panels #three-panel{
+               display:block
+                }
+              #one:checked ~ .tabs #one-tab,
+              #two:checked ~ .tabs #two-tab,
+              #three:checked ~ .tabs #three-tab{
+                background:#fffffff6;
+                color:#000;
+                border-top: 3px solid $bg-terciario;
+               }
+            }
+
+            /*Pop up*/
+            #screen_full_transparent {
+              width: 100%;
+              height: 100%;
+              background-color: rgba($bg-terciario, 0.9);
+              position: fixed;
+              top: 0;
+              left: 0;
+              padding: 0;margin: 0;
+              z-index: 100;
+              display: map-get($visible, invisible);
+             
+            
+              #container_general {
+                max-width:90%;
+                height:auto;
+                margin:20px auto 0px auto;
+                font-family:Arial, Helvetica, sans-serif;
+                
+              }
+              .close_popup {
+                width:auto;
+                height:auto;
+                margin-top:13px;
+                float:right;
+                cursor:pointer;
+                font-size:40px;
+                img
+              {
+                width:50px;
+              
+              }
+              
+              } 
+              .content_popup {
+                max-width:auto;
+               }
+
+
+              .gridCont{
+                img{
+                  max-width: 80%;
+                  @include mobile{
+                    max-width: 100%;
+                  }
+                }
+                .add{
+                    max-width: 40%;
+                    @include mobile{
+                      max-width: 100%;
+                    }
+                }
+                
+
+                h2{
+                  color: $bg-principal;
+                }
+                @include contFlex(flex, column, center, center, 20px, 50px);
+                .banner1{
+                  display: map-get($visible, visible);
+                  @include tablet{
+                    display: map-get($visible, invisible);
+                  }
+                 }
+                 .banner2{
+                  display: map-get($visible, visible);
+                   @include mobile{
+                     display: map-get($visible, invisible);
+                   }
+                 }
+
+                 .banner3{
+                 display: map-get($visible, visible);
+                  }
+
+                  .banners4{
+                    display: map-get($visible, visible);
+                    @include tablet{
+                      display: map-get($visible, invisible);
+                    }
+                    @include mobile{
+                      display: map-get($visible, invisible);
+                    }
+                     } 
+                 
+            }
+
+            
+              
+             }
+     }

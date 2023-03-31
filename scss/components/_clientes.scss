@@ -54,6 +54,9 @@
             transform: scale(1.1);
             transition: $transition;
           }
+          @include mobile{
+            width: 150px;
+          }
         }
         
         @include tablet{
@@ -61,6 +64,7 @@
           }
           @include mobile{
             @include galeriaGrid(repeat(2, 1fr ), repeat (1, 1fr ));
+           
           }
 
 }

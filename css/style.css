@@ -627,6 +627,7 @@ body .ContGral {
 }
 .contenido .galeria .galleryItem {
   height: auto;
+  text-align: center;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -671,6 +672,21 @@ body .ContGral {
 @media screen and (max-width: 570px) {
   .contenido .medidaBan {
     height: 236px;
+  }
+}
+.contenido .medidaSacom {
+  display: block;
+  height: 250px;
+}
+@media screen and (max-width: 768px) {
+  .contenido .medidaSacom {
+    display: none;
+  }
+}
+@media screen and (max-width: 570px) {
+  .contenido .medidaSacom {
+    height: 236px;
+    display: none;
   }
 }
 .contenido .flip-card-inner {
@@ -871,19 +887,6 @@ body .ContGral {
 }
 .contenido #screen_full_transparent .gridCont .banner3 {
   display: block;
-}
-.contenido #screen_full_transparent .gridCont .banners4 {
-  display: block;
-}
-@media screen and (max-width: 768px) {
-  .contenido #screen_full_transparent .gridCont .banners4 {
-    display: none;
-  }
-}
-@media screen and (max-width: 570px) {
-  .contenido #screen_full_transparent .gridCont .banners4 {
-    display: none;
-  }
 }
 
 /*Clientes*/

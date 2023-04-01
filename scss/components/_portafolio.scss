@@ -65,7 +65,8 @@
             
             .galleryItem{
               height:auto;
-              @include contFlex(flex, row, center, center, 0, auto);
+              text-align: center;
+           @include contFlex(flex, row, center, center, 0, auto);
               @include tablet{
                 width: 300px;
                 }
@@ -96,11 +97,26 @@
             }
           }
           .medidaBan{
+            
             height: map-get($medida, height2);
             @include mobile{
               height: map-get($medida, height3);
             }
           }
+
+          .medidaSacom{
+            display: map-get($visible, visible);
+            height: map-get($medida, height2);
+            @include tablet{
+              display: map-get($visible, invisible);
+            }
+            @include mobile{
+              height: map-get($medida, height3);
+              display: map-get($visible, invisible);
+            }
+          }
+
+         
      
           .flip-card-inner {
             position: relative;
@@ -294,15 +310,7 @@
                  display: map-get($visible, visible);
                   }
 
-                  .banners4{
-                    display: map-get($visible, visible);
-                    @include tablet{
-                      display: map-get($visible, invisible);
-                    }
-                    @include mobile{
-                      display: map-get($visible, invisible);
-                    }
-                     } 
+                  
                  
             }
 
